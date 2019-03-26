@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+html body {
+    background-color: #c3c3c3;
+}
+
+.wrapper {
+    margin: 35px auto;
+    width: 370px;
+    height: 600px;
+    border-radius: 15px;
+    padding: 35px 0px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border: 1px solid black;
+}
+.wrapper .con {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 20px);/* 用于动态计算长度值。 需要注意的是,运算符前后都需要保留一个空格,例如:width: calc(100% - 10px);  */
+    background-image: url('../img/timg.jpg');
+    background-size: cover;
+}
+.wrapper .con .name {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    font-weight: bolder;
+    text-align: center;
+    line-height: 50px;
+    color: #333;
+    background-color: #ddd;
+    font-size: 20px;
+}
+
+/* 输入框 */
+.wrapper .con .inputBox {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #ddd;
+}
+.wrapper .con .inputBox .input {
+    margin: 10px 0px 10px 10px;
+    width: 70%;
+    height: 60%;
+    outline: none;
+    border: none ;
+    text-indent: 12px;
+    border-radius: 5px;
+}
+.wrapper .con .inputBox .btn {
+    width: 15%;
+    height: 60%;
+    outline: none;
+    border: none;
+    background-color: #ccc;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.wrapper .con .inputBox .btn:hover {
+    background-color: rgb(34, 151, 34);
+}
+/* 聊天窗口 */ 
+.wrapper .con .chatBox {
+    position: absolute;
+    height: calc(100% - 110px);
+    width: 100%;
+    top: 60px;
+    border: 1px solid red;
+    color: rgb(66, 57, 57);
+}
+.wrapper .con .chatBox .inner {
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.inner .talk_robot{
+    text-align: left;  
+    height: 40px;
+    margin-top: 8px;
+}
+
+.inner .icon {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+}
+.inner .speak {
+    position: relative;
+    display: inline-block;
+    background-color: #fff;
+    line-height: 40px;
+    padding: 0 10px;
+    margin: 0 15px;
+    border-radius: 5px;
+    max-width: 230px;
+} 
+.inner .speak::before {
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    margin-top: -10px;
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-left: 10px solid #fff;
+}
+.inner .talk_robot .speak::before {
+    border: 10px solid transparent;
+    border-right: 10px solid #fff;
+    position: absolute;
+    left: -20px;
+}
+.inner .talk_user{
+    text-align: right;  
+}
+.inner .talk_user .icon {
+    float: right;
+    background-image: url(../img/user.jpg);
+    background-size: cover;
+}
+.inner .talk_robot .icon {
+    vertical-align: middle;
+    background-image: url(../img/robot.jpg);
+    background-size: cover;
+}
